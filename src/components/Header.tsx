@@ -38,7 +38,7 @@ const Header = () => {
             className="font-mono text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             <span className="text-primary">&lt;</span>
-            Guilherme Vassoler
+            Guilherme Vassoller
             <span className="text-primary"> /&gt;</span>
           </a>
 
