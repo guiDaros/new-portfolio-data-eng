@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 14% 10%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 14% 14%;
+    --card-foreground: 210 20% 92%;
+    --card-hover: 220 14% 18%;
+
+    --popover: 220 14% 12%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 173 58% 45%;
+    --primary-foreground: 220 14% 10%;
+    --primary-glow: 173 58% 55%;
+
+    --secondary: 220 14% 18%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 220 14% 20%;
+    --muted-foreground: 215 16% 55%;
+
+    --accent: 173 40% 25%;
+    --accent-foreground: 173 58% 65%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 14% 20%;
+    --input: 220 14% 18%;
+    --ring: 173 58% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --text-primary: 210 20% 92%;
+    --text-secondary: 215 16% 65%;
+    --text-muted: 215 16% 50%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(173 58% 45% / 0.15) 0%, transparent 50%);
+    --gradient-card: linear-gradient(145deg, hsl(220 14% 16%) 0%, hsl(220 14% 12%) 100%);
+    --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsl(173 58% 45% / 0.06), transparent 40%);
+    
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 8px 32px -4px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(173 58% 45% / 0.15);
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --sidebar-background: 220 14% 10%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 173 58% 45%;
+    --sidebar-primary-foreground: 220 14% 10%;
+    --sidebar-accent: 220 14% 18%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 14% 20%;
+    --sidebar-ring: 173 58% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent-foreground bg-clip-text text-transparent;
+  }
+
+  .card-glass {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .tech-tag {
+    @apply inline-flex items-center px-3 py-1.5 text-sm font-mono bg-secondary/60 text-secondary-foreground rounded-md border border-border/50 transition-colors hover:bg-secondary hover:border-primary/30;
+  }
+
+  .section-heading {
+    @apply text-sm font-mono uppercase tracking-wider text-primary mb-4;
+  }
+
+  .glow-effect {
+    @apply relative before:absolute before:inset-0 before:rounded-lg before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100;
+    --before-bg: var(--gradient-glow);
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
