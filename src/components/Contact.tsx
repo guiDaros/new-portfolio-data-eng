@@ -41,7 +41,7 @@ const Contact = () => {
           </p>
 
           <a 
-            href="mailto:guivdaros@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=guivdaros@gmail.com"
             className="inline-flex items-center justify-center gap-3 h-14 px-10 text-lg font-semibold rounded-lg bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 mb-12"
           >
             <Mail className="w-5 h-5" />
