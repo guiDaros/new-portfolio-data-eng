@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 opacity-0 animate-fade-in">
-            Hello, I am <span className="text-primary">Guilherme Vassoler</span>
+            Hello, I am <span className="text-primary">Guilherme Vassoller</span>
           </h1>
 
           {/* Role subtitle */}
